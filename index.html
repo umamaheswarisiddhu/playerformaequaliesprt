@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>uma dom form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <div class="left-container">
+        <div class="left-div">
+            <form id="form">
+                <h1>Player Form</h1>
+                <div class="input-group">
+                    <label for="username">Name</label>
+                    <input type="text" id="username" name="username" placeholder="Name">
+                    <div class="error" id="name-error"></div>
+                </div>
+                <div class="input-group">
+                    <label for="age">Age</label>
+                    <input type="number" id="age" name="age" min="0" max="110" placeholder="Age">
+                    <div class="error" id="age-error"></div>
+                </div>
+                <div class="input-group">
+                    <label for="gender">Gender</label>
+                    <select id="gender">
+                        <option value="" disabled selected>Select Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="transgender">Transgender</option>
+                    </select>
+                    <div class="error" id="gender-error"></div>
+                </div>
+                <div class="input-group">
+                    <label for="sport-type">Sport Type</label>
+                    <select id="sport-type">
+                        <option value="" disabled selected>Select Sport Type</option>
+                        <option value="Indoor">Indoor Game</option>
+                        <option value="Outdoor">Outdoor Game</option>
+                    </select>
+                    <div class="error" id="sport-type-error"></div>
+                </div>
+                <div class="input-group">
+                    <label for="sport">Sport</label>
+                    <select id="sport" disabled>
+                        <option value="" disabled selected>Select a Sport Type first</option>
+                    </select>
+                    <div class="error" id="sport-error"></div>
+                </div>
+                <div class="input-group">
+                    <label for="profile-picture">Profile</label>
+                    <input type="file" name="profile-picture" id="profile-picture" accept="image/jpeg, image/png, image/gif">
+                    <div class="error" id="profile-picture-error"></div>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        
+        <div class="left-bottom">
+            <div class="searchbar">
+                <input type="text" id="search" name="search" placeholder="Search by name..">
+                <i class="fa-solid fa-magnifying-glass glass" ></i>
+            </div>
+            
+            
+            <div>
+                <select id="sport-filter">
+                    <option value="all">All</option>
+                    <option value="indoor">Indoor</option>
+                    <option value="outdoor">Outdoor</option>
+                </select>
+            </div>
+            
+        </div>
+    </div>
+    
+    <div class="right-div" id="user-cards"  id="right-card-container">
+        <h1>Player's Details</h1><br><br>
+        <!-- <div id="userCards"></div> -->
+</div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
